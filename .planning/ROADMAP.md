@@ -32,7 +32,22 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. All Prisma models exist in schema (User, RefreshToken, Category, Product, ProductImage, SellerProfile) with correct relations, and `prisma migrate dev` applies cleanly
   3. All required database indexes are in place (FK columns, filter columns on Product, GIN index for full-text search, email on User, hashedToken on RefreshToken)
   4. Database seeds populate all 6 product categories (Funko, TCG, Anime Figures, Manga, Limited Edition, Retro Games) with representative sample listings
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+**Wave 1**
+- [ ] 01-01-PLAN.md — App scaffolds + Docker Compose + root config files
+
+**Wave 2** *(blocked on Wave 1 completion)*
+- [ ] 01-02-PLAN.md — Prisma schema + PrismaService + DatabaseModule + Jest scaffold
+
+**Wave 3** *(blocked on Wave 2 completion)*
+- [ ] 01-03-PLAN.md — Seed script with 6 categories, accounts, and 18-30 listings
+
+**Wave 4** *(blocked on Wave 3 completion)*
+- [ ] 01-04-PLAN.md — [BLOCKING] Migration + tsvector trigger + seed execution
+
+**Cross-cutting constraints:** `prisma migrate dev` only (no `prisma db push`); all Prisma client imports from `src/generated/prisma/client`; `@prisma/adapter-pg` required in PrismaService and seed constructor
 
 ### Phase 2: Core API — Authentication
 **Goal**: Users can register, log in, refresh sessions, and log out through the Core API with secure token handling and enforced RBAC
@@ -124,7 +139,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure Foundation | 0/? | Not started | - |
+| 1. Infrastructure Foundation | 0/4 | Planned | - |
 | 2. Core API — Authentication | 0/? | Not started | - |
 | 3. BFF — Authentication Layer | 0/? | Not started | - |
 | 4. Frontend — Authentication | 0/? | Not started | - |
