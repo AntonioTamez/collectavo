@@ -103,29 +103,28 @@ Explicitly excluded. Documented to prevent scope creep.
 
 Which phases cover which requirements. Updated during roadmap creation.
 
-| Requirement | Phase | Status |
-|-------------|-------|--------|
-| INFRA-01 | Phase 1 | Pending |
-| INFRA-04 | Phase 1 | Pending |
-| AUTH-01 | Phase 2 | Pending |
-| AUTH-02 | Phase 2 | Pending |
-| AUTH-03 | Phase 2 | Pending |
-| AUTH-04 | Phase 2 | Pending |
-| AUTH-05 | Phase 2 | Pending |
-| INFRA-02 (Core API) | Phase 2 | Pending |
-| INFRA-03 | Phase 2–8 | Pending |
-| LIST-01 | Phase 5 | Pending |
-| LIST-02 | Phase 5 | Pending |
-| LIST-03 | Phase 5 | Pending |
-| LIST-04 | Phase 5 | Pending |
-| CAT-01 | Phase 7 | Pending |
-| CAT-02 | Phase 7 | Pending |
-| CAT-03 | Phase 7 | Pending |
-| CAT-04 | Phase 7 | Pending |
-| SELL-01 | Phase 8 | Pending |
-| SELL-02 | Phase 8 | Pending |
-| SELL-03 | Phase 8 | Pending |
-| INFRA-02 (BFF) | Phase 3 | Pending |
+| Requirement | Phase | Notes | Status |
+|-------------|-------|-------|--------|
+| INFRA-01 | Phase 1 | Docker Compose setup | Pending |
+| INFRA-04 | Phase 1 | Category + sample listing seeds | Pending |
+| AUTH-01 | Phase 2 | Core API register endpoint; frontend in Phase 4 | Pending |
+| AUTH-02 | Phase 2 | Core API login endpoint; frontend in Phase 4 | Pending |
+| AUTH-03 | Phase 2 | Core API refresh token rotation; BFF cookie handling in Phase 3; frontend restore in Phase 4 | Pending |
+| AUTH-04 | Phase 2 | Core API logout endpoint; frontend in Phase 4 | Pending |
+| AUTH-05 | Phase 2 | Core API JwtAuthGuard + RolesGuard; frontend guards in Phase 4 | Pending |
+| INFRA-02 | Phase 2 | Core API Swagger; BFF Swagger in Phase 3 | Pending |
+| INFRA-03 | Phase 5 | Core API test suite 70% coverage on product domain | Pending |
+| LIST-01 | Phase 5 | Core API product creation with RBAC | Pending |
+| LIST-02 | Phase 5 | Core API per-category metadata JSONB | Pending |
+| LIST-03 | Phase 5 | Core API multi-image (ProductImage); upload UI in Phase 8 | Pending |
+| LIST-04 | Phase 5 | Core API edit/deactivate endpoints; dashboard UI in Phase 8 | Pending |
+| CAT-01 | Phase 7 | Frontend product list with pagination/sort; BFF proxy in Phase 6 | Pending |
+| CAT-02 | Phase 7 | Frontend product detail page; BFF proxy in Phase 6 | Pending |
+| CAT-03 | Phase 7 | Frontend faceted filter UI; BFF proxy in Phase 6 | Pending |
+| CAT-04 | Phase 7 | Frontend search results page; Core API full-text search in Phase 5 | Pending |
+| SELL-01 | Phase 8 | Seller dashboard overview page | Pending |
+| SELL-02 | Phase 8 | Listing management (view/edit/activate/deactivate) | Pending |
+| SELL-03 | Phase 8 | Seller public profile page | Pending |
 
 **Coverage:**
 - v1 requirements: 20 total
@@ -134,4 +133,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-05-16*
-*Last updated: 2026-05-16 after initial definition*
+*Last updated: 2026-05-16 after roadmap creation*
