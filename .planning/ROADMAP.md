@@ -36,7 +36,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 **Wave 1**
-- [ ] 01-01-PLAN.md — App scaffolds + Docker Compose + root config files
+- [x] 01-01-PLAN.md — App scaffolds + Docker Compose + root config files
 
 **Wave 2** *(blocked on Wave 1 completion)*
 - [ ] 01-02-PLAN.md — Prisma schema + PrismaService + DatabaseModule + Jest scaffold
@@ -139,7 +139,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure Foundation | 0/4 | Planned | - |
+| 1. Infrastructure Foundation | 1/4 | In Progress | - |
 | 2. Core API — Authentication | 0/? | Not started | - |
 | 3. BFF — Authentication Layer | 0/? | Not started | - |
 | 4. Frontend — Authentication | 0/? | Not started | - |

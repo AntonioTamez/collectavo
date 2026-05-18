@@ -37,7 +37,7 @@ Requirements for Milestone 1. Each maps to roadmap phases.
 
 ### Infrastructure
 
-- [ ] **INFRA-01**: All services run via Docker Compose for local development (Angular frontend + NestJS BFF + NestJS Core API + PostgreSQL)
+- [x] **INFRA-01**: All services run via Docker Compose for local development (Angular frontend + NestJS BFF + NestJS Core API + PostgreSQL)
 - [ ] **INFRA-02**: Swagger/OpenAPI documentation auto-generated on both BFF and Core API
 - [ ] **INFRA-03**: Unit and integration test suites with 70% minimum coverage on Core API
 - [ ] **INFRA-04**: Database seeds for all 6 product categories and representative sample listings
@@ -105,7 +105,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Notes | Status |
 |-------------|-------|-------|--------|
-| INFRA-01 | Phase 1 | Docker Compose setup | Pending |
+| INFRA-01 | Phase 1 | Docker Compose setup | Complete (01-01) |
 | INFRA-04 | Phase 1 | Category + sample listing seeds | Pending |
 | AUTH-01 | Phase 2 | Core API register endpoint; frontend in Phase 4 | Pending |
 | AUTH-02 | Phase 2 | Core API login endpoint; frontend in Phase 4 | Pending |
@@ -133,4 +133,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-05-16*
-*Last updated: 2026-05-16 after roadmap creation*
+*Last updated: 2026-05-18 after plan 01-01 execution*

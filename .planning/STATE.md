@@ -2,10 +2,10 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planning
-stopped_at: Phase 1 planned — ready to execute
-last_updated: "2026-05-17"
-last_activity: 2026-05-17 — Phase 1 planned (4 plans, 4 waves)
+status: executing
+stopped_at: Phase 1 Plan 01 complete — ready for Plan 02
+last_updated: "2026-05-18"
+last_activity: 2026-05-18 — Phase 1 Plan 01 executed (app scaffolds + Docker Compose)
 progress:
   total_phases: 8
   completed_phases: 0
@@ -26,29 +26,29 @@ See: .planning/PROJECT.md (updated 2026-05-16)
 ## Current Position
 
 Phase: 1 of 8 (Infrastructure Foundation)
-Plan: 0 of 4 in current phase
-Status: Ready to execute
-Last activity: 2026-05-17 — Phase 1 planned (4 plans, 4 waves)
+Plan: 1 of 4 in current phase
+Status: Executing (Plan 01 complete, Plan 02 next)
+Last activity: 2026-05-18 — Phase 1 Plan 01 executed (app scaffolds + Docker Compose)
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█░░░░░░░░░] 3% (1/32 plans estimated)
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 0
-- Average duration: — min
-- Total execution time: 0 hours
+- Total plans completed: 1
+- Average duration: 6 min
+- Total execution time: 0.1 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| Phase 1 (plan 01) | 6 min | 6 min | 6 min |
 
 **Recent Trend:**
 
-- Last 5 plans: —
+- Last 5 plans: 01-01 (6 min)
 - Trend: —
 
 *Updated after each plan completion*
@@ -65,6 +65,9 @@ Recent decisions affecting current work:
 - Init: RefreshToken as separate table — supports multi-device and token family reuse detection
 - Init: BFF on port 3000 / Core API on port 3001 per STACK.md
 - Init: Image storage backend deferred decision — Cloudinary free tier recommended; decide before Phase 5
+- 01-01: @prisma/adapter-pg placed in runtime dependencies (not devDependencies) — Prisma 7 requires driver adapter at runtime
+- 01-01: Angular scaffold uses provideAnimationsAsync (lazy) per Angular 20 best practices
+- 01-01: core-api AppModule intentionally has no DatabaseModule — added in Plan 02 after PrismaService implementation
 
 ### Pending Todos
 
@@ -83,6 +86,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-17
-Stopped at: Phase 1 planned — ready to execute
-Resume file: .planning/phases/01-infrastructure-foundation/01-01-PLAN.md
+Last session: 2026-05-18
+Stopped at: Completed 01-01-PLAN.md (app scaffolds + Docker Compose + root config files)
+Resume file: .planning/phases/01-infrastructure-foundation/01-02-PLAN.md
