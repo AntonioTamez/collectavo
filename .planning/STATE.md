@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 1 Plan 01 complete — ready for Plan 02
-last_updated: "2026-05-18"
-last_activity: 2026-05-18 — Phase 1 Plan 01 executed (app scaffolds + Docker Compose)
+stopped_at: Phase 1 Plan 02 complete — ready for Plan 03
+last_updated: "2026-05-17"
+last_activity: 2026-05-17 — Phase 1 Plan 02 executed (Prisma schema + PrismaService + DatabaseModule + Jest scaffold)
 progress:
   total_phases: 8
   completed_phases: 0
@@ -26,30 +26,31 @@ See: .planning/PROJECT.md (updated 2026-05-16)
 ## Current Position
 
 Phase: 1 of 8 (Infrastructure Foundation)
-Plan: 1 of 4 in current phase
-Status: Executing (Plan 01 complete, Plan 02 next)
-Last activity: 2026-05-18 — Phase 1 Plan 01 executed (app scaffolds + Docker Compose)
+Plan: 2 of 4 in current phase
+Status: Executing (Plan 02 complete, Plan 03 next)
+Last activity: 2026-05-17 — Phase 1 Plan 02 executed (Prisma schema + PrismaService + DatabaseModule + Jest scaffold)
 
-Progress: [█░░░░░░░░░] 3% (1/32 plans estimated)
+Progress: [█░░░░░░░░░] 6% (2/32 plans estimated)
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 1
-- Average duration: 6 min
-- Total execution time: 0.1 hours
+- Total plans completed: 2
+- Average duration: 8 min
+- Total execution time: 0.3 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | Phase 1 (plan 01) | 6 min | 6 min | 6 min |
+| Phase 1 (plan 02) | 10 min | 16 min | 8 min |
 
 **Recent Trend:**
 
-- Last 5 plans: 01-01 (6 min)
-- Trend: —
+- Last 5 plans: 01-01 (6 min), 01-02 (10 min)
+- Trend: stable
 
 *Updated after each plan completion*
 
@@ -68,6 +69,13 @@ Recent decisions affecting current work:
 - 01-01: @prisma/adapter-pg placed in runtime dependencies (not devDependencies) — Prisma 7 requires driver adapter at runtime
 - 01-01: Angular scaffold uses provideAnimationsAsync (lazy) per Angular 20 best practices
 - 01-01: core-api AppModule intentionally has no DatabaseModule — added in Plan 02 after PrismaService implementation
+- 01-02: Prisma 7 breaking change — provider = "prisma-client" (not prisma-client-js), output mandatory, moduleFormat = "cjs" for NestJS CommonJS
+- 01-02: Prisma 7 breaking change — datasource url in prisma.config.ts only, not in schema.prisma
+- 01-02: Prisma 7 breaking change — PrismaClient always super({ adapter }) with PrismaPg; bare super() throws at startup
+- 01-02: PrismaClient import from ../../generated/prisma/client (not @prisma/client) — Prisma 7 generated client in output path
+- 01-02: DatabaseModule @Global() — PrismaService injectable anywhere without per-module re-import
+- 01-02: Product.searchVector Unsupported("tsvector")? + @@index type:Gin — full-text search schema foundation
+- 01-02: prisma.service.spec.ts integration smoke test requires live postgres (fails outside Docker — expected)
 
 ### Pending Todos
 
@@ -86,6 +94,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-18
-Stopped at: Completed 01-01-PLAN.md (app scaffolds + Docker Compose + root config files)
-Resume file: .planning/phases/01-infrastructure-foundation/01-02-PLAN.md
+Last session: 2026-05-17
+Stopped at: Completed 01-02-PLAN.md (Prisma schema + PrismaService + DatabaseModule + Jest scaffold)
+Resume file: .planning/phases/01-infrastructure-foundation/01-03-PLAN.md

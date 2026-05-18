@@ -39,7 +39,7 @@ Plans:
 - [x] 01-01-PLAN.md — App scaffolds + Docker Compose + root config files
 
 **Wave 2** *(blocked on Wave 1 completion)*
-- [ ] 01-02-PLAN.md — Prisma schema + PrismaService + DatabaseModule + Jest scaffold
+- [x] 01-02-PLAN.md — Prisma schema + PrismaService + DatabaseModule + Jest scaffold
 
 **Wave 3** *(blocked on Wave 2 completion)*
 - [ ] 01-03-PLAN.md — Seed script with 6 categories, accounts, and 18-30 listings
