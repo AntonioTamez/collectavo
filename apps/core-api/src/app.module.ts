@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
+import { DatabaseModule } from './infrastructure/database/database.module';
 
-// DatabaseModule is added in Plan 02 after PrismaService is implemented
 @Module({
-  imports: [],
+  imports: [DatabaseModule],
   controllers: [],
   providers: [],
 })
