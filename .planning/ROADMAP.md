@@ -42,7 +42,7 @@ Plans:
 - [x] 01-02-PLAN.md — Prisma schema + PrismaService + DatabaseModule + Jest scaffold
 
 **Wave 3** *(blocked on Wave 2 completion)*
-- [ ] 01-03-PLAN.md — Seed script with 6 categories, accounts, and 18-30 listings
+- [x] 01-03-PLAN.md — Seed script with 6 categories, accounts, and 18-30 listings
 
 **Wave 4** *(blocked on Wave 3 completion)*
 - [ ] 01-04-PLAN.md — [BLOCKING] Migration + tsvector trigger + seed execution
@@ -139,7 +139,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure Foundation | 1/4 | In Progress | - |
+| 1. Infrastructure Foundation | 3/4 | In Progress | - |
 | 2. Core API — Authentication | 0/? | Not started | - |
 | 3. BFF — Authentication Layer | 0/? | Not started | - |
 | 4. Frontend — Authentication | 0/? | Not started | - |

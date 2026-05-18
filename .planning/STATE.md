@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 1 Plan 02 complete — ready for Plan 03
-last_updated: "2026-05-17"
-last_activity: 2026-05-17 — Phase 1 Plan 02 executed (Prisma schema + PrismaService + DatabaseModule + Jest scaffold)
+stopped_at: Phase 1 Plan 03 complete — ready for Plan 04
+last_updated: "2026-05-18"
+last_activity: 2026-05-18 — Phase 1 Plan 03 executed (seed script: 6 categories, buyer/seller accounts, 19 listings, 38 images)
 progress:
   total_phases: 8
   completed_phases: 0
@@ -26,18 +26,18 @@ See: .planning/PROJECT.md (updated 2026-05-16)
 ## Current Position
 
 Phase: 1 of 8 (Infrastructure Foundation)
-Plan: 2 of 4 in current phase
-Status: Executing (Plan 02 complete, Plan 03 next)
-Last activity: 2026-05-17 — Phase 1 Plan 02 executed (Prisma schema + PrismaService + DatabaseModule + Jest scaffold)
+Plan: 3 of 4 in current phase
+Status: Executing (Plan 03 complete, Plan 04 next)
+Last activity: 2026-05-18 — Phase 1 Plan 03 executed (seed script: 6 categories, buyer/seller accounts, 19 listings, 38 images)
 
-Progress: [█░░░░░░░░░] 6% (2/32 plans estimated)
+Progress: [█░░░░░░░░░] 9% (3/32 plans estimated)
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 2
-- Average duration: 8 min
+- Total plans completed: 3
+- Average duration: 6 min
 - Total execution time: 0.3 hours
 
 **By Phase:**
@@ -46,10 +46,11 @@ Progress: [█░░░░░░░░░] 6% (2/32 plans estimated)
 |-------|-------|-------|----------|
 | Phase 1 (plan 01) | 6 min | 6 min | 6 min |
 | Phase 1 (plan 02) | 10 min | 16 min | 8 min |
+| Phase 1 (plan 03) | 3 min | 19 min | 6 min |
 
 **Recent Trend:**
 
-- Last 5 plans: 01-01 (6 min), 01-02 (10 min)
+- Last 5 plans: 01-01 (6 min), 01-02 (10 min), 01-03 (3 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -76,6 +77,9 @@ Recent decisions affecting current work:
 - 01-02: DatabaseModule @Global() — PrismaService injectable anywhere without per-module re-import
 - 01-02: Product.searchVector Unsupported("tsvector")? + @@index type:Gin — full-text search schema foundation
 - 01-02: prisma.service.spec.ts integration smoke test requires live postgres (fails outside Docker — expected)
+- 01-03: bcryptjs (pure JS) chosen over bcrypt — no native compilation required, Docker Alpine safe
+- 01-03: bcrypt.hash() called at runtime inside seed main() — not pre-computed strings — reliable across environments
+- 01-03: Products use deleteMany-then-create for demo seller (not upsert) — Product has no unique title constraint; demo seller data is entirely recreatable
 
 ### Pending Todos
 
@@ -94,6 +98,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-17
-Stopped at: Completed 01-02-PLAN.md (Prisma schema + PrismaService + DatabaseModule + Jest scaffold)
-Resume file: .planning/phases/01-infrastructure-foundation/01-03-PLAN.md
+Last session: 2026-05-18
+Stopped at: Completed 01-03-PLAN.md (seed script: 6 categories, buyer/seller accounts, 19 listings with bcrypt passwords)
+Resume file: .planning/phases/01-infrastructure-foundation/01-04-PLAN.md
